@@ -1,0 +1,29 @@
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); }
+  .whatsapp-icon { width: 35px; height: 35px; fill: white; }
+</style>
+
+<a href="https://wa.me/5215500000000?text=Hola%20Radar%20Viajero,%20me%20interesa%20una%20oferta." 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Contactar por WhatsApp">
+  <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2z"/>
+  </svg>
+</a>
