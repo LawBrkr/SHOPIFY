@@ -1,0 +1,73 @@
+/* --- 1. Variables (Clean CSS) --- */
+:root {
+  /* Paleta Radar Viajero */
+  --color-primary: #004aad; /* Azul Profundo - Confianza */
+  --color-accent: #ff6b6b;  /* Coral/Rojo - Urgencia/Oferta */
+  --color-bg: #f8f9fa;      /* Blanco Humo - Limpieza */
+  --color-text: #333333;
+  --color-text-light: #666666;
+  
+  /* Tipografía */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  /* Espaciado */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --container-width: 1200px;
+}
+
+/* --- 2. Reset & Base --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-primary); }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- 3. Utilities --- */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4); }
+
+/* --- 4. Grid System (Mobile First) --- */
+.deal-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en celular */
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* Tablet y Desktop */
+@media (min-width: 768px) {
+  .deal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .deal-grid { grid-template-columns: repeat(3, 1fr); }
+}
