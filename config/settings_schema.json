@@ -1,0 +1,98 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Radar Viajero Theme",
+    "theme_author": "Socio Senior de Desarrollo",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com/usuario/radar-viajero"
+  },
+  {
+    "name": "🎨 Colores de Marca",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Identidad Visual"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Color Primario (Confianza)",
+        "default": "#004aad",
+        "info": "Usado en títulos, encabezados y enlaces."
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Color de Acento (Conversión)",
+        "default": "#ff6b6b",
+        "info": "El color más importante. Usado en botones de compra y precios de oferta."
+      },
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Color de Fondo",
+        "default": "#f8f9fa"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Color de Texto",
+        "default": "#333333"
+      }
+    ]
+  },
+  {
+    "name": "🔠 Tipografía",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Fuentes del Sistema"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Fuente de Títulos",
+        "default": "montserrat_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Fuente de Cuerpo",
+        "default": "open_sans_n4"
+      }
+    ]
+  },
+  {
+    "name": "📱 Contacto & WhatsApp",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Configuración de Ventas"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "Número de WhatsApp",
+        "info": "Formato internacional sin símbolos (ej: 5215512345678)",
+        "default": "5215500000000"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_message",
+        "label": "Mensaje Predeterminado",
+        "default": "Hola Radar Viajero, vi una oferta y quiero más información."
+      }
+    ]
+  },
+  {
+    "name": "🛒 Configuración de Pagos",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_currency_flags",
+        "label": "Mostrar banderas de moneda",
+        "default": true
+      }
+    ]
+  }
+]
