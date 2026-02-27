@@ -1,0 +1,31 @@
+<article class="deal-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+  <a href="{{ product.url }}">
+    <div class="image-wrapper" style="position: relative;">
+      <img src="{{ product.featured_image | img_url: '600x' }}" 
+           alt="{{ product.title | escape }}"
+           loading="lazy" 
+           width="600" 
+           height="400"
+           style="object-fit: cover; width: 100%; height: 220px;">
+      
+      {% if product.compare_at_price > product.price %}
+        <span style="position: absolute; top: 10px; right: 10px; background: var(--color-accent); color: white; padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem;">
+          -{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round }}%
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="card-body" style="padding: 20px;">
+      <h3 style="font-size: 1.1rem; margin-bottom: 8px;">{{ product.title }}</h3>
+      
+      <div class="price-box" style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 15px;">
+        {% if product.compare_at_price > product.price %}
+          <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">{{ product.compare_at_price | money }}</span>
+        {% endif %}
+        <span style="color: var(--color-primary); font-weight: 800; font-size: 1.3rem;">{{ product.price | money }}</span>
+      </div>
+
+      <div class="btn btn-primary" style="width: 100%">Lo quiero</div>
+    </div>
+  </a>
+</article>
