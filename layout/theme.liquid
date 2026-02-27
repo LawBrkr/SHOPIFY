@@ -15,7 +15,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    {{ content_for_header }} </head>
+    {{ content_for_header }} 
+    <style>
+    :root {
+      /* Mapeo de Colores */
+      --color-primary: {{ settings.color_primary }};
+      --color-accent: {{ settings.color_accent }};
+      --color-bg: {{ settings.color_bg }};
+      --color-text: {{ settings.color_text }};
+
+      /* Mapeo de Fuentes (Shopify Font Loader) */
+      {% assign font_heading = settings.font_heading %}
+      {% assign font_body = settings.font_body %}
+
+      {{ font_heading | font_face }}
+      {{ font_body | font_face }}
+
+      --font-heading: {{ font_heading.family }}, {{ font_heading.fallback_families }};
+      --font-body: {{ font_body.family }}, {{ font_body.fallback_families }};
+    }
+  </style>
+/head>
 
   <body>
     {% section 'header' %}
