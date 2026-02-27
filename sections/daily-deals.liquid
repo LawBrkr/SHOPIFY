@@ -1,0 +1,42 @@
+<section class="section-deals container">
+  <header class="section-header" style="text-align: center; margin: 40px 0;">
+    <h2>🔥 Ofertas Relámpago del Día</h2>
+    <p>Actualizado hoy: {{ "now" | date: "%d/%m/%Y" }}</p>
+  </header>
+
+  <div class="deal-grid">
+    {% for product in collections['ofertas-del-dia'].products limit: 6 %}
+      {% render 'product-card', product: product %}
+    {% else %}
+      {% for i in (1..3) %}
+        <article class="deal-card">
+          <div class="image-wrapper" style="background: #ddd; height: 200px; display:flex; align-items:center; justify-content:center;">
+            <span>Ejemplo: Cancún Todo Incluido</span>
+          </div>
+          <div class="card-body">
+            <span class="badge-urgency">¡Quedan 4 lugares!</span>
+            <h3>Escapada a Cancún 4D/3N</h3>
+            <div class="price-box">
+              <span class="old-price">$12,000</span>
+              <span class="current-price">$8,500 MXN</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%">Ver Oferta</button>
+          </div>
+        </article>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ofertas Diarias",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Grid de Ofertas",
+      "category": "Productos"
+    }
+  ]
+}
+{% endschema %}
